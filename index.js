@@ -30,6 +30,9 @@ client.connect(err => {
     })
   })
 
+  app.get('/',(req,res)=>{
+    res.send('i am working')
+  })
 
   app.post('/addevent',(req,res)=>{
     const newEvent = req.body;
