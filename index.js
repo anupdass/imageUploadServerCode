@@ -31,7 +31,7 @@ client.connect(err => {
   })
 
   app.get('/',(req,res)=>{
-    res.send('i am working')
+    res.send("hello i am working")
   })
 
   app.post('/addevent',(req,res)=>{
