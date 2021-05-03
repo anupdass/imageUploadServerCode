@@ -5,14 +5,14 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient;
 
-const port = process.env.POART || 8000
+const port = process.env.PORT || 8000
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 
 
 
@@ -30,9 +30,9 @@ client.connect(err => {
     })
   })
 
-  app.get('/',(req,res)=>{
-    res.send("hello i am working")
-  })
+  // app.get('/',(req,res)=>{
+  //   res.send("hello i am working")
+  // })
 
   app.post('/addevent',(req,res)=>{
     const newEvent = req.body;
